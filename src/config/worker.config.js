@@ -1,5 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config();
 export const workerConfig = {
-  port: 3030,
+  port: process.env.port,
   workerSetting: {
     logLevel: "warn",
     logTags: ["info", "ice", "dtls", "rtp", "rtcp"],
